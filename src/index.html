@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!-- ru  	en  uk zxx
+http://htmlbook.ru/html/value/lang
+-->
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>PRICES</title>
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <article class="content">
+        <h2 class="is-hidden">price</h2>
+        <section class="prices">
+          <h2 class="title">prices</h2>
+          <p class="prices__description">
+            The following information s considered when charging the order:
+          </p>
+          <div class="prices__img">
+            <div class="prices__block">
+              <img src="img/clock.png" alt="clock">
+              <p class="prices__text">
+                Your duedate
+              </p>
+            </div>
+            <div class="prices__block">
+              <img src="img/head.png" alt="clock">
+              <p class="prices__text">
+                Academic level
+              </p>
+            </div>
+            <div class="prices__block">
+              <img src="img/notes.png" alt="clock">
+              <p class="prices__text">
+                Page/words
+              </p>
+            </div>
+          </div>
+
+          <form class="form__prices" action="#" method="post">
+            <!-- curency -->
+            <div class="form__select">
+              <p class="form__text">Select curency</p>
+              <div class="curency">
+                <span class="curency__group">
+                  <input class="curency__input" type="radio" name="valuta" id="usd" checked />
+                  <label for="usd">usd</label>
+                </span>
+                <span class="curency__group">
+                  <input class="curency__input" type="radio" name="valuta" id="eur" />
+                  <label for="eur">eur</label>
+                </span>
+                <span class="curency__group">
+                  <input class="curency__input" type="radio" name="valuta" id="cad" />
+                  <label for="cad">cad</label>
+                </span>
+                <span class="curency__group">
+                  <input class="curency__input" type="radio" name="valuta" id="gbr" />
+                  <label for="gbr">gbr</label>
+                </span>
+                <span class="curency__group">
+                  <input class="curency__input" type="radio" name="valuta" id="aud" />
+                  <label for="aud">aud</label>
+                </span>
+              </div>
+            </div>
+            <!-- services -->
+            <div class="form__select">
+              <p class="form__text">Type of service</p>
+              <input class="form__input" id="cv" type="text" placeholder="Resume/CV service">
+            </div>
+
+            <div class="form__select ">
+              <label class="form__text" for="level">Type level</label>
+              <select class="level" id="level">
+                <option value="entry">Entry</option>
+                <option value="out">Out</option>
+              </select>
+            </div>
+          </form>
+
+          <!-- services calc prices-->
+          <div class="media560">
+            <p>Rotate the device to see the calculator at a resolution of more than 500 pixels.</p>
+          </div>
+
+          <form name="form2" class="services">
+            <div class="services__wrap">
+              <div class="services__types--popular">
+                <div class="services__vertical">
+                  <p class="services__vertical--text">
+                    Most popular
+                  </p>
+                </div>
+
+                <div class="servises__table">
+                  <div class="table__title">
+                    <p class="table__title--heading">
+                      Services
+                    </p>
+                    <div class="table__number">
+                      <span class="table__title-cell">
+                        5 days
+                      </span>
+                      <span class="table__title-cell">
+                        3 days
+                      </span>
+                      <span class="table__title-cell">
+                        48 hourse
+                      </span>
+                      <span class="table__title-cell">
+                        24 hourse
+                      </span>
+                    </div>
+
+                  </div>
+                  <div class="table-row">
+                    <p class="table-row__text">
+                      Resume writing
+                    </p>
+                    <div class="table__number">
+                      <div class="high-wrap"></div>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group1[]" id="res-writ1"
+                          onClick="toggle(1,'res-writ')" checked value="125.5" />
+                        <label for="res-writ1">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group1[]" id="res-writ2"
+                          onClick="toggle(2,'res-writ')" value="125.5" />
+                        <label for="res-writ2">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group1[]" id="res-writ3"
+                          onClick="toggle(3,'res-writ')" value="125.5" />
+                        <label for="res-writ3">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group1[]" id="res-writ4"
+                          onClick="toggle(4,'res-writ')" value="125.5" />
+                        <label for="res-writ4">$125.5</label>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="table-row">
+                    <p class="table-row__text">
+                      Resume editing
+                    </p>
+                    <div class="table__number">
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group2[]" id="res-edit1"
+                          onClick="toggle(1,'res-edit')" checked value="125.5" />
+                        <label for="res-edit1">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group2[]" id="res-edit2"
+                          onClick="toggle(2,'res-edit')" value="125.5" />
+                        <label for="res-edit2">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group2[]" id="res-edit3"
+                          onClick="toggle(3,'res-edit')" value="125.5" />
+                        <label for="res-edit3">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group2[]" id="res-edit4"
+                          onClick="toggle(4,'res-edit')" value="125.5" />
+                        <label for="res-edit4">$125.5</label>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="table-row">
+                    <p class="table-row__text">
+                      CV editing
+                    </p>
+                    <div class="table__number">
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group3[]" id="cv-edit1"
+                          onClick="toggle(1,'cv-edit')" value="125.5" />
+                        <label for="cv-edit1">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group3[]" id="cv-edit2"
+                          onClick="toggle(2,'cv-edit')" checked value="125.5" />
+                        <label for="cv-edit2">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group3[]" id="cv-edit3"
+                          onClick="toggle(3,'cv-edit')" value="125.5" />
+                        <label for="cv-edit3">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group3[]" id="cv-edit4"
+                          onClick="toggle(4,'cv-edit')" value="125.5" />
+                        <label for="cv-edit4">$125.5</label>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="services__types--other">
+                <div class="services__vertical services__vertical--other ">
+                  <p class="services__vertical--text other">
+                    Other
+                  </p>
+                </div>
+
+                <div class="servises__table">
+                  <div class="table-row">
+                    <p class="tableletter table-row__text">
+                      New! E-Cover Letter Writing
+                    </p>
+                    <div class="table__number">
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group4[]" id="leter-writ1"
+                          onClick="toggle(1,'leter-writ')" checked value="125.5" />
+                        <label for="leter-writ1">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group4[]" id="leter-writ2"
+                          onClick="toggle(2,'leter-writ')" value="125.5" />
+                        <label for="leter-writ2">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group4[]" id="leter-writ3"
+                          onClick="toggle(3,'leter-writ')" value="125.5" />
+                        <label for="leter-writ3">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group4[]" id="leter-writ4"
+                          onClick="toggle(4,'leter-writ')" value="125.5" />
+                        <label for="leter-writ4">$125.5</label>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="table-row">
+                    <p class="table-row__text">
+                      Resume Package: Resume + Cover letter writing
+                    </p>
+                    <div class="table__number">
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group5[]" id="resum-pac1"
+                          onClick="toggle(1,'resum-pac')" checked value="125.5" />
+                        <label for="resum-pac1">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group5[]" id="resum-pac2"
+                          onClick="toggle(2,'resum-pac')" value="125.5" />
+                        <label for="resum-pac2">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group5[]" id="resum-pac3"
+                          onClick="toggle(3,'resum-pac')" value="125.5" />
+                        <label for="resum-pac3">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group5[]" id="resum-pac4"
+                          onClick="toggle(4,'resum-pac')" value="125.5" />
+                        <label for="resum-pac4">$125.5</label>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="table-row">
+                    <p class="table-row__text">
+                      CV Package: CV + cover letter writing
+                    </p>
+                    <div class="table__number">
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group6[]" id="cv-pac1"
+                          onClick="toggle(1,'cv-pac')" value="125.5" />
+                        <label for="cv-pac1">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group6[]" id="cv-pac2"
+                          onClick="toggle(2,'cv-pac')" checked value="125.5" />
+                        <label for="cv-pac2">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group6[]" id="cv-pac3"
+                          onClick="toggle(3,'cv-pac')" value="125.5" />
+                        <label for="cv-pac3">$125.5</label>
+                      </span>
+                      <span class="tabl-row__group">
+                        <input class="tabl-row__input" type="checkbox" name="group6[]" id="cv-pac4"
+                          onClick="toggle(4,'cv-pac')" value="125.5" />
+                        <label for="cv-pac4">$125.5</label>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="total-container">
+              <div class="total-price">
+                <p class="total-price__title">
+                  Total price:
+                </p>
+                <span class="total-price__info">$</span>
+                <input class="total-price__info--input" type="text" name="totalInput" placeholder="125.50">
+              </div>
+              <input class="services__btn btn-reset" type="button" value="proceed to order" onClick="total()">
+            </div>
+
+          </form>
+        </section>
+        <aside class=" features">
+          <div class="features__block">
+            <div class="features__title">
+              <img src="img/title-img.png" alt="illustration">
+              <h2 class="title__text">Free features</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet, architecto cumque libero
+              magni
+              minima no bis non sunt tempora v
+              oluptatum!Lorem ipsit amet, consectetur adipisicing elit.
+              Adipisci amet, architecto cumque libero magni minima no
+              bis non sunt tempora voluptatum!Lorem ipsumamet, co
+              nsectetur adipisicing elit.
+              Adipisci amet, architecto cumque libero magni minima no
+              bis non sunt tempora voluptatum!
+            </p>
+          </div>
+          <div class="features__block">
+            <p>
+              Lorem ipsum dolor sit amet, co
+              nsectetur adipisicing elit.
+              Adipisci amet, architecto c
+              umque libero magni minima no
+              bis non sunt tempora v
+              oluptatum!Lorem ipsit amet, co
+              nsectetur adipisicing elit.
+              Adipisci amet, architecto c
+              umque libero magni minima no
+              bis non sunt tempora v
+              oluptat
+            </p>
+          </div>
+          <div class="features__block">
+            <p>Lorem ipsum dolor sit amet, co
+              nsectetur adipisicing elit.
+              Adipisci amet, architecto c
+              umque libero magni minima no
+              bis non sunt tempora v
+              oluptatum!Lorem ipsit amet, co
+              nsectetur adipisicing elit.
+              Adipisci amet, architecto c
+              umque libero magni minima no
+              bis non sunt tempora v
+              oluptat
+            </p>
+          </div>
+        </aside>
+      </article>
+      <aside class="stats">
+        <h2 class="title">Our stats</h2>
+        <div class="stats__content">
+          <div class="stats__cart">
+            <img class="stats cart__img" src="img/customers.png" alt="Customers">
+            <p class="cart__text">
+              Customers
+            </p>
+            <span class="curt__number">
+              665
+            </span>
+          </div>
+          <div class=" stats stats__cart">
+            <img class="cart__img" src="img/witers.png" alt="Customers">
+            <p class="cart__text">
+              Witers active
+            </p>
+            <span class="curt__number">
+              169
+            </span>
+          </div>
+          <div class="stats__cart">
+            <img class="stats cart__img" src="img/awerage.png" alt="Customers">
+            <p class="cart__text">
+              Average quality score <span class="curt__number"> 9.5/10 </span>
+            </p>
+          </div>
+          <div class="stats__cart">
+            <img class="stats cart__img" src="img/online.png" alt="Customers">
+            <p class="cart__text">
+              Writers online
+            </p>
+            <span class="curt__number"> 73 </span>
+          </div>
+        </div>
+      </aside>
+    </main>
+    @include('partials/footer.html')
+  </div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
