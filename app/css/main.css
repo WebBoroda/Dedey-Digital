@@ -1,37 +1,17 @@
-// CUSTOM COMPONENTS STYLES
-// .burger {
-//   --burger-width: 40px;
-//   --burger-height: 20px;
-//   --burger-line-height: 2px;
-
-//   @include burger;
-// @import "./components/header";
-// @import "./components/footer";
-// @import "./components/media";
-
-// }
-@import "vars";
-
-
 input,
 input:focus,
 input.focus-visible {
   border: none;
-  outline: 0;
-}
+  outline: 0; }
 
 label {
-  margin-bottom: .7rem;
-}
-
+  margin-bottom: .7rem; }
 
 .reserv {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 3.3rem;
-
-}
+  padding-left: 3.3rem; }
 
 .hotel,
 .date__enter,
@@ -40,16 +20,13 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-
-}
+  justify-content: space-between; }
 
 .hotel {
   position: relative;
   font-size: 1.2rem;
-  margin-right: .5rem;
-
-  &::before {
+  margin-right: .5rem; }
+  .hotel::before {
     content: '';
     display: block;
     width: 0.2rem;
@@ -57,28 +34,19 @@ label {
     position: absolute;
     top: .6rem;
     right: 0;
-    background-color: $color-br-light;
-  }
-
-}
+    background-color: rgba(228, 228, 228, 0.8); }
 
 .hotel__choice {
   display: flex;
-  flex-direction: column;
-
-
-  span {
-    margin-bottom: .7rem;
-  }
-}
+  flex-direction: column; }
+  .hotel__choice span {
+    margin-bottom: .7rem; }
 
 .hotel__input {
   padding-left: 2rem;
   padding-right: .5rem;
   font-family: 'Fira Sans';
-  font-size: 1.8rem;
-
-}
+  font-size: 1.8rem; }
 
 .geo-svg {
   position: absolute;
@@ -88,24 +56,17 @@ label {
   height: 2rem;
   fill: none;
   stroke-width: .8;
-  stroke: $color-accent;
-  margin-right: .8rem;
-}
-
-
-
+  stroke: #ed9915;
+  margin-right: .8rem; }
 
 .date {
   display: flex;
-
   position: relative;
   font-family: 'Proxima Nova Rg';
   font-size: 1.2rem;
-
   padding-right: 2.5rem;
-  margin-right: 2.5rem;
-
-  &::before {
+  margin-right: 2.5rem; }
+  .date::before {
     content: '';
     display: block;
     width: 0.2rem;
@@ -113,183 +74,129 @@ label {
     position: absolute;
     top: .6rem;
     right: 0;
-    background-color: $color-br-light;
-  }
-}
+    background-color: rgba(228, 228, 228, 0.8); }
 
 .date__input {
   font-family: 'Fira Sans';
   font-weight: bold;
   font-size: 1.8rem;
-  color: $color-text-second;
+  color: #383838;
   cursor: pointer;
-  max-width: 13.8rem;
-}
+  max-width: 13.8rem; }
 
 .date__enter,
 .date__exit {
   align-items: flex-start;
   position: relative;
-  padding-left: 2.5rem;
-}
+  padding-left: 2.5rem; }
 
 .date__enter--label {
-  margin-left: -2rem;
-}
+  margin-left: -2rem; }
 
 .date__enter::before {
   content: "";
   display: block;
   width: 2rem;
   height: 2rem;
-
   background: url("../img/calendar.svg") no-repeat;
   background-size: 2rem 2rem;
-
   position: absolute;
   top: 1.9rem;
-  left: 0
-}
+  left: 0; }
 
 .date__enter::after {
   content: "";
   display: block;
   width: .2rem;
   height: .2rem;
-  background-color: $color-input;
-
+  background-color: #8b9198;
   position: absolute;
   bottom: .5rem;
-  right: 0;
-}
+  right: 0; }
 
 .date__exit::after {
   content: "";
   display: block;
   width: 1rem;
   height: 1rem;
-
-
   border-top: .2rem solid;
   border-right: .2rem solid;
-  border-color: $color-input;
+  border-color: #8b9198;
   transform: rotate(135deg);
   cursor: pointer;
   z-index: 10;
-
   position: absolute;
   bottom: .5rem;
-  right: 0;
-}
-
+  right: 0; }
 
 .reserv .quantity {
   align-items: flex-start;
   font-family: 'Proxima Nova Rg';
   font-size: 1.2rem;
   margin-right: 2.5rem;
-
-  position: relative;
-
-
-  input {
+  position: relative; }
+  .reserv .quantity input {
     width: 3rem;
     height: 2.7rem;
     font-size: 1.6rem;
     text-align: center;
-    color: $color-input;
-    border: 1px solid $color-input;
-  }
-
-  .input-btn {
+    color: #8b9198;
+    border: 1px solid #8b9198; }
+  .reserv .quantity .input-btn {
     position: absolute;
     width: 0;
     height: 0;
-
     left: 3.2rem;
-
     border: .5rem solid transparent;
     background-color: transparent;
     cursor: pointer;
-    z-index: 10;
-  }
-
-  .input-btn__top {
+    z-index: 10; }
+  .reserv .quantity .input-btn__top {
     bottom: 1.8rem;
-
     border-top: 0;
-    border-bottom-color: $color-accent;
-
-  }
-
-  .input-btn__down {
+    border-bottom-color: #ed9915; }
+  .reserv .quantity .input-btn__down {
     bottom: .4rem;
-
     border-bottom: 0;
-    border-top-color: $color-input;
-  }
-
-
-
-}
-
+    border-top-color: #8b9198; }
 
 .circle-plus {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: $color-accent;
+  background-color: #ed9915;
   display: inline-flex;
   justify-content: center;
-  align-items: center;
-
-
-  &::before {
+  align-items: center; }
+  .circle-plus::before {
     content: '+';
-    color: $color-white;
+    color: #fff;
     display: block;
     font-size: 3rem;
     font-weight: bold;
-    margin-left: -1px;
-  }
-}
-
-
+    margin-left: -1px; }
 
 .btn {
   display: flex;
   align-items: center;
-
-  color: $color-white;
+  color: #fff;
   padding: 2.3rem 5.5rem;
-
-  background: $color-accent;
+  background: #ed9915;
   border-radius: 4px;
-
   font-family: 'Proxima Nova Rg';
   font-weight: bold;
   letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-
-// @media (min-width: 1040px) {}
+  text-transform: uppercase; }
 
 @media (max-width: 1200px) {
-
   .container {
-    width: 100%;
-  }
-
+    width: 100%; }
   .reserv {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
-
-  }
-
+    padding: 2rem; }
   .hotel,
   .hotel__choice,
   .date__enter,
@@ -298,31 +205,18 @@ label {
     margin: 0;
     margin-bottom: 2rem;
     align-items: center;
-    justify-content: center;
-  }
-
-  .hotel {
-    &::before {
-      display: none;
-    }
-  }
-
+    justify-content: center; }
+  .hotel::before {
+    display: none; }
   .date {
     margin: 0;
-    flex-direction: column;
-
-    &::before {
-      display: none;
-    }
-  }
-
+    flex-direction: column; }
+    .date::before {
+      display: none; }
   .reserv .quantity {
     margin-right: 0;
-    width: 5rem;
-  }
-
+    width: 5rem; }
   .circle-plus {
-    margin-bottom: 2rem;
-  }
+    margin-bottom: 2rem; } }
 
-}
+/*# sourceMappingURL=main.css.map */

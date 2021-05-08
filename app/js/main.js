@@ -34,3 +34,5 @@ function change(objName, min, max, step) {
 // more info https://www.npmjs.com/package/js-datepicker#installation
 //  End calendar
 
+
+//# sourceMappingURL=main.js.map

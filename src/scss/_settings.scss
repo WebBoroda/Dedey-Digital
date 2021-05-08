@@ -16,9 +16,9 @@ html {
 body {
   margin: 0;
   font-size: 1.6rem;
-  font-family: 'Nunito', sans-serif;
-  background-color: var(--color-white);
-  color: var(--color-text-main);
+  font-family: 'Myriad Pro', sans-serif;
+  background-color: $color-white;
+  color: $color-text-main;
 }
 
 img {
@@ -47,6 +47,13 @@ ul {
   min-height: 100vh;
 }
 
+.container {
+  margin: 10rem auto;
+  padding: 1.5rem;
+  width: 117.0rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 footer {
   margin-top: auto;
 }
@@ -71,12 +78,6 @@ footer {
   border: none;
   background: transparent;
   cursor: pointer;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 10px;
-  max-width: 1200px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
